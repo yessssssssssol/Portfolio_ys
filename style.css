@@ -1,0 +1,177 @@
+* {
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: gainsboro;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  /* justify-content: center;
+  text-align: center; */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-top: 50px;
+}
+.button button {
+  background-color: inherit;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  margin-left: 40px;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0 8px 16px 0 rgba(251, 249, 249, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.button button:hover {
+  border: 2px solid white;
+  color: white;
+  font-weight: bolder;
+  box-shadow: 20 20px 20px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box {
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar {
+  flex-direction: column; //navbar 안에서 세로 정렬
+  width: 300px;
+  height: 100%;
+  font-size: 16px;
+  font-family: "Frijole", "Black Ops One", "Sarpanch", cursive;
+  margin-right: 100px;
+}
+#home {
+  justify-content: center;
+  padding-top: 10px;
+  margin-top: 40px;
+}
+.navbar__logo {
+  font-size: 24px;
+  color: white;
+  /* display: flex; */
+  /* flex-direction: row; */
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.navbar__logo i {
+  color: black;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex-direction: column;
+  width: 260px;
+}
+
+.navbar__menu li {
+  padding: 8px 40px 15px 40px;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 3px 3px 3px white;
+}
+
+.navbar__menu a {
+  padding: 8px 40px 15px 40px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.navbar__menu li:hover {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+.navbar__menu a:hover {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.navbar__icons {
+  list-style: none;
+  color: rgb(44, 44, 44);
+  display: flex;
+  justify-content: center;
+  text-shadow: 3px 3px 3px white;
+}
+
+.navbar__icons li {
+  padding: 8px 12px;
+}
+
+.navbar__icons li :hover {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.navbar__togleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+
+  font-size: 24px;
+  color: rgb(13, 102, 102);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px;
+    width: 100%;
+  }
+  .navbar__logo {
+    font-size: 24px;
+    color: rgb(67, 68, 71);
+    font-family: "Frijole", "Sarpanch", "Black Ops One", cursive;
+    font-weight: 400;
+    padding: 10px 0px 10px 0px;
+
+    text-align: center;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar__togleBtn {
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}
